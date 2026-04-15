@@ -1,0 +1,52 @@
+ <html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>proj</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Kanban Board</h1>
+    <div class="d-flex gap-2 mb-5">
+      <input type="text" id="taskInput" class="form-control" placeholder="descrizione del task">
+      <button type="button" id="taskButton" class="btn btn-primary">aggiungi</button>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h5>TO DO</h5>
+        <div id="todoColonna" class="kanban-colonna">
+
+
+        </div>
+      </div>
+      <div class="col">
+        <h5>DOING</h5>
+        <div id="doingColonna" class="kanban-colonna"></div>
+
+      </div>
+      <div class="col ">
+        <h5>DONE</h5>
+        <div id="doneColonna" class="kanban-colonna"></div>
+
+      </div>
+    </div>
+  </div>
+  <div ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="./logica.js"></script>
+
+<!--
+          <div class="kanban-card">
+            <div class="float-end">
+              <button type="button" class="btn btn-danger btn-sm">X</button>
+            </div>
+          </div>-->
